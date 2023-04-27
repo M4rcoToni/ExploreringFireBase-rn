@@ -1,10 +1,11 @@
-import { NavigationContainer } from '@react-navigation/native'
-
-import { getAuth, } from "firebase/auth";
-
-import { AppRoutes } from './app.routes'
 import { useEffect, useState } from 'react';
+import { NavigationContainer } from '@react-navigation/native'
+import { getAuth, } from 'firebase/auth';
+import { AppRoutes } from './app.routes'
+
 import { Home } from '../screens/Home';
+import { View } from 'react-native';
+
 export function Routes() {
     const auth = getAuth();
     const [user, setUser] = useState(null);
@@ -13,7 +14,7 @@ export function Routes() {
         return subscriber;
     }, [])
     return (
-        <NavigationContainer>
+        <NavigationContainer >
             {user ? <Home /> : <AppRoutes />}
         </NavigationContainer>
     )

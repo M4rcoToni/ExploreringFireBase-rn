@@ -6,7 +6,7 @@ interface Props extends TextInputProps {
 }
 export function Input({ password, ...rest }: Props) {
   return (
-    <View >
+    <View>
       <View className=' h-12 w-72 bg-appgray-300  rounded-md absolute  mt-6 ml-4' />
       <View className=' h-12 w-72 bg-appgreen-300  rounded-md absolute  mt-3 ml-6' />
       <View className='h-12 w-72 bg-white rounded-md flex-row items-center px-3 ml-9'>

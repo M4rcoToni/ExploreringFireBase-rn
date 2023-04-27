@@ -9,7 +9,7 @@ export function Register() {
   const navigation = useNavigation();
 
   return (
-    <View className='flex-1 items-center justify-center  bg-appwhite-200 pt-32 my-12'>
+    <View className='flex-1 items-center justify-center  bg-appwhite-200'>
       <View className='my-8'>
         <Title
           text='Cadastro' />
@@ -23,7 +23,6 @@ export function Register() {
           title='Ja estou cadastrado'
           iconName='arrow-left'
         />
-
       </View>
     </View>
   );

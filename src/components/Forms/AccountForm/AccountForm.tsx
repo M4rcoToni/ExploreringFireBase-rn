@@ -5,7 +5,7 @@ import { ButtonApp } from '../../Controllers/Button';
 import { Input } from '../../Controllers/Input';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-import { app } from '../../../Firebase/firebase';
+import { app } from '../../../firebase/firebase';
 
 export function AccountForm() {
   const [email, setEmail] = useState('');

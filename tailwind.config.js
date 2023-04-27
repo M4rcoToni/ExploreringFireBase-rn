@@ -4,7 +4,7 @@ module.exports = {
     "./src/components/**.tsx",
     "./src/components/Controllers/**.tsx",
     "./src/components/Forms/**.tsx",
-    "./src/components/Forms/SiginForm/*.tsx",
+    "./src/components/Forms/SignForm/*.tsx",
     "./src/components/Forms/AccountForm/*.tsx",
     "./src/screens/**.tsx"
   ],

@@ -3,6 +3,7 @@ import { TouchableOpacityProps } from 'react-native';
 import { Feather } from '@expo/vector-icons'
 
 import { TouchableOpacity, View, Text, ActivityIndicator } from 'react-native';
+
 interface Props extends TouchableOpacityProps {
   title: string;
   iconName: string;
