@@ -2,7 +2,7 @@ import React from 'react';
 import { TouchableOpacityProps } from 'react-native';
 import { Feather } from '@expo/vector-icons'
 
-import { TouchableOpacity, View, Text, ActivityIndicator } from 'react-native';
+import { TouchableOpacity, Text } from 'react-native';
 import { MotiView } from 'moti';
 
 interface Props extends TouchableOpacityProps {

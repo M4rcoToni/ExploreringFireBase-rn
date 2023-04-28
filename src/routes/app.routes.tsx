@@ -23,7 +23,6 @@ export function AppRoutes() {
         name='register'
         component={Register}
       />
-
     </Navigator>
   )
 }

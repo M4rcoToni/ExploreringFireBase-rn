@@ -1,6 +1,5 @@
-import { MotiView } from 'moti';
-import React from 'react';
 import { Text } from 'react-native';
+import { MotiView } from 'moti';
 
 interface Props {
   text: string;

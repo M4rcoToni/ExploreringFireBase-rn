@@ -22,7 +22,7 @@ export function ButtonApp({ title, isLoading = false, ...rest }: Props) {
   return (
     <TouchableOpacity
       {...rest}
-      activeOpacity={0.7}
+      activeOpacity={0.9}
       disabled={isLoading}
     >
       <MotiView

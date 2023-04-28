@@ -1,13 +1,14 @@
 import React, { useEffect } from 'react';
-import { View, TextInput, TextInputProps } from 'react-native';
-import { Feather, createMultiStyleIconSet } from '@expo/vector-icons'
+import { View, TextInput, TextInputProps, Text } from 'react-native';
+import { Feather } from '@expo/vector-icons'
 import { MotiView, useAnimationState } from 'moti';
 
 interface Props extends TextInputProps {
-  title: string;
+  placeholder: string;
   password?: boolean;
+  errorMessage?: string | null
 }
-export function Input({ title, password, ...rest }: Props) {
+export function Input({ errorMessage = null, placeholder, password, ...rest }: Props) {
   function initialAnimationState() {
     return useAnimationState({
       from: {
@@ -22,7 +23,7 @@ export function Input({ title, password, ...rest }: Props) {
   const state = initialAnimationState();
 
   return (
-    <View>
+    <View className='my-5'>
       <MotiView
         className=' h-12 w-72 bg-appgray-300  rounded-md absolute  mt-6 ml-4'
         state={state}
@@ -43,24 +44,26 @@ export function Input({ title, password, ...rest }: Props) {
             <Feather
               name='user'
               size={24}
-              color={'gray'} />
+
+              color={errorMessage ? 'red' : 'gray'}
+            />
 
             :
             <Feather
               name='lock'
               size={24}
-              color={'gray'}
+              color={errorMessage ? 'red' : 'gray'}
             />
         }
         <TextInput
           keyboardType={password ? 'default' : 'email-address'}
-          placeholder={title}
+          placeholder={placeholder}
           secureTextEntry
           className=' text-appgray-300 px-3 text-base w-full'
           {...rest}
         />
-
       </MotiView>
+
     </View >
 
   );

@@ -46,24 +46,20 @@ export function SignIn() {
         />
       </View>
 
-      <View>
-        <Input
-          title='Usuário'
-          onChangeText={setEmail}
-          value={email}
-        />
-      </View>
+      <Input
+        placeholder='Usuário'
+        onChangeText={setEmail}
+        value={email}
+      />
 
-      <View className='mt-10'>
-        <Input
-          title='Senha'
-          password
-          onChangeText={setPassword}
-          value={password}
-        />
-      </View>
+      <Input
+        placeholder='Senha'
+        password
+        onChangeText={setPassword}
+        value={password}
+      />
 
-      <View className='mt-10'>
+      <View className='mt-6'>
         <ButtonApp
           isLoading={isLoading}
           onPress={handleSignIn}
@@ -84,6 +80,7 @@ export function SignIn() {
           iconName='mail'
         />
       </View>
+
     </View>
   );
 }
