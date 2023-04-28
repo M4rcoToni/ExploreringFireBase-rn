@@ -1,8 +1,9 @@
 import { View } from 'react-native';
-import { ButtonApp } from '../components/Controllers/Button';
 
 import { getAuth, signOut } from "firebase/auth";
 import { app } from '../firebase/firebase';
+
+import { ButtonApp } from '../components/Button';
 
 export function Home() {
   const auth = getAuth(app);

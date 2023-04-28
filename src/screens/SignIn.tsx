@@ -6,9 +6,10 @@ import { getAuth, signInWithEmailAndPassword, sendPasswordResetEmail } from "fir
 import { app } from '../firebase/firebase';
 
 import { AppNavigatorRoutesProps } from '../routes/app.routes';
-import { OtherButton } from '../components/Controllers/OtherButton';
-import { Input } from '../components/Controllers/Input';
-import { ButtonApp } from '../components/Controllers/Button';
+import { OtherButton } from '../components/OtherButton';
+import { Input } from '../components/Input';
+import { ButtonApp } from '../components/Button';
+import { Title } from '../components/Title';
 
 export function SignIn() {
   const navigation = useNavigation<AppNavigatorRoutesProps>();
@@ -37,10 +38,17 @@ export function SignIn() {
     }
   }
   return (
-    <View className='flex-1 items-center justify-center  bg-appwhite-200 pt-32'>
+    <View className='flex-1 items-center justify-center  bg-appwhite-200 '>
+
+      <View className='my-8'>
+        <Title
+          text='Acesse sua conta'
+        />
+      </View>
 
       <View>
         <Input
+          title='Usuário'
           onChangeText={setEmail}
           value={email}
         />
@@ -48,17 +56,18 @@ export function SignIn() {
 
       <View className='mt-10'>
         <Input
+          title='Senha'
           password
           onChangeText={setPassword}
           value={password}
         />
       </View>
 
-      <View className='mt-9'>
+      <View className='mt-10'>
         <ButtonApp
           isLoading={isLoading}
           onPress={handleSignIn}
-          title='entrar'
+          title='Acessar'
         />
       </View>
 

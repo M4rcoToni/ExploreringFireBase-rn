@@ -1,5 +1,6 @@
-import React from 'react';
-import { StyleSheet, StatusBar, Text, View } from 'react-native';
+import 'react-native-reanimated';
+import 'react-native-gesture-handler';
+import { StatusBar } from 'react-native';
 import { Routes } from './src/routes';
 
 export default function App() {
