@@ -4,13 +4,21 @@ import { initializeApp } from "firebase/app";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+
+const apiKey = process.env.apiKey;
+const authDomain = process.env.authDomain;
+const projectId = process.env.projectId;
+const storageBucket = process.env.storageBucket;
+const messagingSenderId = process.env.messagingSenderId;
+const appId = process.env.appId;
+
 const firebaseConfig = {
-  apiKey: "AIzaSyDueqKsbztBmLcAxWzqW-07uI0NO_4GH_o",
-  authDomain: "greenbook-db207.firebaseapp.com",
-  projectId: "greenbook-db207",
-  storageBucket: "greenbook-db207.appspot.com",
-  messagingSenderId: "535223283044",
-  appId: "1:535223283044:web:6af0d5d000a6657c1d5e71"
+  apiKey,
+  authDomain,
+  projectId,
+  storageBucket,
+  messagingSenderId,
+  appId
 };
 
 // Initialize Firebase

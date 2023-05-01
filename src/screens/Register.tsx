@@ -1,12 +1,11 @@
 import { useNavigation } from '@react-navigation/native';
 import React, { useState } from 'react';
-import { View, Text, Alert } from 'react-native';
+import { View, Alert } from 'react-native';
 
 import * as yup from 'yup';
 import { useForm, Controller } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 
-import { FirebaseApp } from '@firebase/app';
 import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
 import { app } from '../firebase/firebase';
 
@@ -15,12 +14,12 @@ import { Input } from '../components/Input';
 import { ButtonApp } from '../components/Button';
 import { OtherButton } from '../components/OtherButton';
 
-
 type FormDataProps = {
   email: string;
   password: string;
   password_confirm: string;
 }
+
 const signUpSchema = yup.object({
   email: yup.string().required('Informe  o e-mail.').email('E-mail inválido.'),
   password: yup.string().required('Informe  a senha.').min(6, 'A senha deve ter no mínimo 6 dígitos.'),
@@ -40,13 +39,14 @@ export function Register() {
   function handleNewAccount({ email, password, password_confirm }: FormDataProps) {
     setIsLoading(true);
 
-    // createUserWithEmailAndPassword(auth, email, password)
-    //   .then(() => Alert.alert('Conta', 'Cadastrado com sucesso!'))
-    //   .catch((error) => console.log(error))
-    //   .finally(() => setIsLoading(false));
+    createUserWithEmailAndPassword(auth, email, password)
+      .then(() => Alert.alert('Conta', 'Cadastrado com sucesso!'))
+      .catch((error) => console.log(error))
+      .finally(() => setIsLoading(false));
+
     setIsLoading(false)
-    console.log(email, password);
   }
+
   return (
     <View className='flex-1 items-center justify-center  bg-appwhite-200'>
       <View className='my-8'>

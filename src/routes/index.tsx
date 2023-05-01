@@ -5,6 +5,7 @@ import { getAuth, } from 'firebase/auth';
 import { AppRoutes } from './app.routes'
 
 import { Home } from '../screens/Home';
+import { View } from 'react-native';
 
 export function Routes() {
   const auth = getAuth();
@@ -16,8 +17,10 @@ export function Routes() {
   }, [])
 
   return (
-    <NavigationContainer >
-      {user ? <Home /> : <AppRoutes />}
-    </NavigationContainer>
+    <View className='flex-1 bg-appwhite-200'>
+      <NavigationContainer >
+        {user ? <Home /> : <AppRoutes />}
+      </NavigationContainer>
+    </View>
   )
 }
