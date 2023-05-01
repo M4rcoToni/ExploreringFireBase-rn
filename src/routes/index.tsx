@@ -17,10 +17,8 @@ export function Routes() {
   }, [])
 
   return (
-    <View className='flex-1 bg-appwhite-200'>
-      <NavigationContainer >
-        {user ? <Home /> : <AppRoutes />}
-      </NavigationContainer>
-    </View>
+    <NavigationContainer >
+      {user ? <Home /> : <AppRoutes />}
+    </NavigationContainer>
   )
 }
