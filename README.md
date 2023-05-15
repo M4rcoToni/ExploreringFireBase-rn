@@ -3,6 +3,8 @@ Este é um aplicativo construído para estudar a implementação de login utiliz
 
 [App](.github/fire.mp4)
 
+<img src=".github/signin.jpg" height="550" /> <img src=".github/register.jpg" height="550"/>
+
 ##  🚀 Tecnologias usadas
 
 - [React Native](https://reactnative.dev/)
